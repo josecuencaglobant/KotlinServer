@@ -11,11 +11,14 @@ group = "com.sim"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
+
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
+
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -24,6 +27,15 @@ dependencies {
 
 	//Changes in RunTime
 	implementation("org.springframework.boot:spring-boot-devtools:2.6.5")
+
+	//Swager 3.0.0
+	//https://github.com/hendisantika/swagger-kotlin
+	//https://springfox.github.io/springfox/docs/current/#getting-started
+	//http://localhost:8080/swagger-ui/
+	implementation ("io.springfox:springfox-boot-starter:3.0.0")
+	implementation("io.springfox:springfox-swagger-ui:3.0.0")
+	implementation("io.springfox:springfox-swagger2:3.0.0")
+
 
 }
 
