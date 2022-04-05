@@ -23,6 +23,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	//implementation("android.arch.persistence.room:runtime:1.1.1")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 	//Changes in RunTime
@@ -36,6 +37,9 @@ dependencies {
 	implementation("io.springfox:springfox-swagger-ui:3.0.0")
 	implementation("io.springfox:springfox-swagger2:3.0.0")
 
+	//Postgress
+	implementation("org.postgresql:postgresql:42.3.3")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
 }
 
