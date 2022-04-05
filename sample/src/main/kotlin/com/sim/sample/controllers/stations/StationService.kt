@@ -17,16 +17,20 @@ class StationService: BasicCrud<Station,Long> {
     @Autowired
     lateinit var repository: StationsRepository
 
-    override fun findAll(): ArrayList<Station> {
+    override fun findAll(): ResponseEntity<ArrayList<Station>> {
         val stations = repository.findAll()
         val resp = ArrayList<Station>()
-       stations.forEach {
-            station ->  resp.add(station)
-        }
-        resp.sortBy {
-            station -> station.name
-        }
-        return resp
+       stations.let {
+           it.forEach {
+                   station ->  resp.add(station)
+           }
+           resp.sortBy {
+                   station -> station.name
+           }
+       }
+        return ResponseEntity.status(
+            if(stations != null) HttpStatus.OK else HttpStatus.CONFLICT
+        ).body(resp)
     }
 
     override fun findById(id: Long): ResponseEntity<Station> {

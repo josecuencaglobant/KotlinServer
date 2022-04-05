@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity
 
 interface BasicCrud<OBJECT,ID> {
 
-    fun findAll(): ArrayList<OBJECT>
+    fun findAll(): ResponseEntity<ArrayList<OBJECT>>
     fun findById(id: ID): ResponseEntity<OBJECT>
     fun save(element: OBJECT): ResponseEntity<OBJECT>
     fun update(element: OBJECT): ResponseEntity<OBJECT>
