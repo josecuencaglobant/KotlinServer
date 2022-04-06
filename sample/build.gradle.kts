@@ -22,7 +22,8 @@ dependencies {
 	val latestGraphQlVersion = "5.3.2"
 	val latestSwagger = "3.0.0"
 
-	implementation("org.springframework.boot:spring-boot-starter-web")
+	//GraphQL dont use Flux
+	//implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -43,9 +44,16 @@ dependencies {
 	implementation("org.postgresql:postgresql:42.3.3")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
-
 	//GraphQL
 	implementation("com.expediagroup", "graphql-kotlin-spring-server", latestGraphQlVersion)
+	implementation("com.expediagroup", "graphql-kotlin-schema-generator", latestGraphQlVersion)
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	testImplementation("io.projectreactor:reactor-test")
+
+
+
 
 }
 

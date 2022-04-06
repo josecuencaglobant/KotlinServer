@@ -5,5 +5,5 @@ import org.springframework.stereotype.Component
 
 @Component
 class HelloWorldQuery: Query {
-    fun helloWorld() = "Hello World"
+    fun helloWorld() = "Manolo & Esme <3"
 }
