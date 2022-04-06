@@ -19,6 +19,9 @@ repositories {
 
 dependencies {
 
+	val latestGraphQlVersion = "5.3.2"
+	val latestSwagger = "3.0.0"
+
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -32,13 +35,17 @@ dependencies {
 	//https://github.com/hendisantika/swagger-kotlin
 	//https://springfox.github.io/springfox/docs/current/#getting-started
 	//http://localhost:8080/swagger-ui/
-	implementation ("io.springfox:springfox-boot-starter:3.0.0")
-	implementation("io.springfox:springfox-swagger-ui:3.0.0")
-	implementation("io.springfox:springfox-swagger2:3.0.0")
+	implementation ("io.springfox:springfox-boot-starter:$latestSwagger")
+	implementation("io.springfox:springfox-swagger-ui:$latestSwagger")
+	implementation("io.springfox:springfox-swagger2:$latestSwagger")
 
 	//Postgress
 	implementation("org.postgresql:postgresql:42.3.3")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+
+	//GraphQL
+	implementation("com.expediagroup", "graphql-kotlin-spring-server", latestGraphQlVersion)
 
 }
 
