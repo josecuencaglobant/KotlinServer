@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface StationsRepository: CrudRepository<Station,Long> {
+interface StationsRepositoryPostgress: CrudRepository<Station,Long> {
 }
