@@ -28,6 +28,14 @@ class StationGraphQl(val id: Int = -1, val name: String = ""){
     }
 }
 
+//http://localhost:8080/graphql
+/*
+query Stations{
+    findAllStations{
+    id,name
+  }
+}
+ */
 @Component
 class StationsQuery: Query {
     @Autowired
